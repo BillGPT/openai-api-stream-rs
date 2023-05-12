@@ -1,4 +1,4 @@
-# openai-api-rs
+# openai-api-stream-rs
 
 A Rust crate that provides a simple function for interacting with the OpenAI API and performing language-based tasks. This crate focuses on streaming responses from the API, enabling real-time processing of large amounts of data.
 
@@ -15,8 +15,15 @@ To use this crate, simply create an instance of the `OpenAIStream` struct, passi
 
 Example:
 
+``` toml
+[dependencies]
+"openai-api-stream-rs" = "0.1.0"
+"tokio" = { version = "1.12.0", features = ["full"] }
+"futures" = "0.3.19"
+```
+
 ```rust
-use openai_api_rs::{OpenAIStream, GptStream};
+use openai_api_stream_rs::OpenAIStream;
 use futures::stream::StreamExt;
 
 #[tokio::main]
